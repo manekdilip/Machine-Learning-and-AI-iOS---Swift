@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Cnx-8v-sof">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="Rzf-v1-M4N">
+            <objects>
+                <viewController id="Cnx-8v-sof" customClass="ViewController" customModule="demoMachineLearning" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5C-tg-DLf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YlN-dG-zVG">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqx-VX-UVE" userLabel="ReviewLabel">
+                                        <rect key="frame" x="20" y="20" width="335" height="29"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Good Movie" translatesAutoresizingMaskIntoConstraints="NO" id="a7I-V4-gQM" userLabel="ReviewInputText">
+                                        <rect key="frame" x="20" y="69" width="335" height="159"/>
+                                        <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="159" id="E4v-H3-M02"/>
+                                        </constraints>
+                                        <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Prediction Result" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mts-Gx-jeZ" userLabel="PredictionResultLabel">
+                                        <rect key="frame" x="20" y="248" width="335" height="29"/>
+                                        <color key="backgroundColor" red="0.20000000000000001" green="0.59999999999999998" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bbh-jr-Dia" userLabel="PredictionResultImage">
+                                        <rect key="frame" x="112.5" y="297" width="150" height="150"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="7Pf-sv-Z1G"/>
+                                            <constraint firstAttribute="width" secondItem="bbh-jr-Dia" secondAttribute="height" multiplier="1:1" id="wfB-o6-tFA"/>
+                                        </constraints>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZB0-k1-9O1" userLabel="ValidateButton">
+                                        <rect key="frame" x="112.5" y="467" width="150" height="41"/>
+                                        <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="24"/>
+                                        <state key="normal" title="Validate">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="validateButtonTapped:" destination="Cnx-8v-sof" eventType="touchUpInside" id="lZW-vC-fAt"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="Lqx-VX-UVE" firstAttribute="top" secondItem="YlN-dG-zVG" secondAttribute="top" constant="20" id="2sN-HO-YEd"/>
+                                    <constraint firstItem="ZB0-k1-9O1" firstAttribute="trailing" secondItem="bbh-jr-Dia" secondAttribute="trailing" id="7sg-Tk-sew"/>
+                                    <constraint firstItem="Mts-Gx-jeZ" firstAttribute="leading" secondItem="a7I-V4-gQM" secondAttribute="leading" id="C1h-Jb-JrO"/>
+                                    <constraint firstItem="bbh-jr-Dia" firstAttribute="centerX" secondItem="YlN-dG-zVG" secondAttribute="centerX" id="G9C-dd-oFy"/>
+                                    <constraint firstAttribute="trailing" secondItem="a7I-V4-gQM" secondAttribute="trailing" constant="20" id="IB3-fU-CsH"/>
+                                    <constraint firstItem="Lqx-VX-UVE" firstAttribute="leading" secondItem="YlN-dG-zVG" secondAttribute="leading" constant="20" id="JEg-VA-lUf"/>
+                                    <constraint firstItem="Mts-Gx-jeZ" firstAttribute="top" secondItem="a7I-V4-gQM" secondAttribute="bottom" constant="20" id="Kif-Ck-rzi"/>
+                                    <constraint firstAttribute="trailing" secondItem="Lqx-VX-UVE" secondAttribute="trailing" constant="20" id="Ng1-xg-YWU"/>
+                                    <constraint firstItem="Lqx-VX-UVE" firstAttribute="centerX" secondItem="YlN-dG-zVG" secondAttribute="centerX" id="OY1-Jj-YRp"/>
+                                    <constraint firstItem="bbh-jr-Dia" firstAttribute="top" secondItem="Mts-Gx-jeZ" secondAttribute="bottom" constant="20" id="RQ1-yy-AYr"/>
+                                    <constraint firstItem="ZB0-k1-9O1" firstAttribute="leading" secondItem="bbh-jr-Dia" secondAttribute="leading" id="U96-8g-iW4"/>
+                                    <constraint firstItem="ZB0-k1-9O1" firstAttribute="top" secondItem="bbh-jr-Dia" secondAttribute="bottom" constant="20" id="Xw0-nP-LqY"/>
+                                    <constraint firstItem="a7I-V4-gQM" firstAttribute="top" secondItem="Lqx-VX-UVE" secondAttribute="bottom" constant="20" id="esU-f3-PjI"/>
+                                    <constraint firstItem="Mts-Gx-jeZ" firstAttribute="trailing" secondItem="a7I-V4-gQM" secondAttribute="trailing" id="fai-uY-qTg"/>
+                                    <constraint firstItem="ZB0-k1-9O1" firstAttribute="centerX" secondItem="YlN-dG-zVG" secondAttribute="centerX" id="iW1-qc-d6Y"/>
+                                    <constraint firstItem="a7I-V4-gQM" firstAttribute="leading" secondItem="YlN-dG-zVG" secondAttribute="leading" constant="20" id="lae-od-9ha"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="YlN-dG-zVG" secondAttribute="bottom" id="Jjo-wK-kIn"/>
+                            <constraint firstItem="YlN-dG-zVG" firstAttribute="top" secondItem="F5C-tg-DLf" secondAttribute="top" id="haT-bU-zTp"/>
+                            <constraint firstItem="YlN-dG-zVG" firstAttribute="leading" secondItem="F5C-tg-DLf" secondAttribute="leading" id="jtl-p8-v9a"/>
+                            <constraint firstAttribute="trailing" secondItem="YlN-dG-zVG" secondAttribute="trailing" id="msJ-xE-V8E"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="predictionResultImageView" destination="bbh-jr-Dia" id="lpe-o7-oe4"/>
+                        <outlet property="reviewInputTextView" destination="a7I-V4-gQM" id="0oY-uK-WG6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="erP-nm-VOp" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="770" y="148"/>
+        </scene>
+    </scenes>
+</document>
